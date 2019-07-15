@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="./../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>CoreUI Free Bootstrap Admin Template</title>
+    <!-- Icons-->
+    <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+    </script>
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar navbar-expand-lg"><a class="navbar-brand" href="#"><img class="navbar-brand-full" src="img/brand/logo.png" alt="CoreUI Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <ul class="nav navbar-text d-md-down-none">
+        <li class="nav-item px-3"><i class="cui-magnifying-glass icon-4x"></i><span>Search jobs, customers, groups or supergroups</span></li>
+      </ul>
+      <div class="navbar-collapse collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#"><i class="icon-list"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="cui-speech"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="icon-bell"></i></a></li>
+          <div class="vl"></div>
+          <li class="nav-item dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thom Gowing</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu"><a class="dropdown-item" href="#">Logout</a></div><img class="img-avatar" src="img/avatars/6.jpg" alt="admin@straker.com">
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon cui-dashboard" aria-hidden="true"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="nav-icon cui-inbox" aria-hidden="true"></i> Jobs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon cui-briefcase" aria-hidden="true"></i> Business Jobs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon cui-user" aria-hidden="true"></i> Personal Jobs</a></li>
+            <li class="divider">
+              <ul class="navbar nav-title">
+                <li class="nav-item">
+                  <h5>Quick Links</h5>
+                </li>
+                <li class="nav-item"><span class="badge badge-primary">+ Add</span></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon cui-arrow-right" aria-hidden="true"></i> Team 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="nav-icon cui-arrow-right" aria-hidden="true"></i> Team 2</a></li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <!-- Title & Filter-->
+        <div class="card">
+          <div class="card-body">
+            <h3>Jobs</h3>
+            <form class="pt-4">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="col-sm-3 form-group manager">
+                      <label for="inputState">Project Manager</label>
+                      <select class="form-control" id="inputState">
+                        <option selected>Select...</option>
+                        <option>John Doe</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3 form-group">
+                      <label for="inputState">Account Manager</label>
+                      <select class="form-control" id="inputState">
+                        <option selected>All</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3 form-group status">
+                      <label for="inputState">Status</label>
+                      <select class="form-control" id="inputState">
+                        <option selected>Select...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="row">
+                        <div class="col-sm-9 form-group">
+                          <label for="inputState">More...</label>
+                          <select class="form-control" id="inputState">
+                            <option selected>Select...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-3 align-self-center"><i class="cui-magnifying-glass icon-4x pull-left" aria-hidden="true"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="row justify-content-end">
+                    <div class="vl"></div>
+                    <div class="col-md-6 form-group">
+                      <label for="inputState">Sort by</label>
+                      <select class="form-control" id="inputState" style="border-radius: 0px">
+                        <option selected>Label</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="card">
+              <div class="card-header">Scrollspy
+                <div class="card-header-actions"><a class="card-header-action" href="http://coreui.io/docs/components/bootstrap-scrollspy/" target="_blank"><small class="text-muted">docs</small></a></div>
+              </div>
+              <div class="card-body">
+                <div class="scrollspy-example1">
+                  <nav class="navbar navbar-light bg-light" id="navbar-example1" style="padding: .5rem 1rem;"><a class="navbar-brand" href="#">Navbar</a>
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#fat">@fat</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#mdo">@mdo</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#one" target="_top">one</a><a class="dropdown-item" href="#two" target="_top">two</a>
+                          <div class="dropdown-divider" role="separator"></div><a class="dropdown-item" href="#three" target="_top">three</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div id="spy-example1" data-spy="scroll" data-target="#navbar-example1" data-offset="65" style="position: relative; height: 200px; overflow: auto; margin-top: .5rem; overflow-y: scroll;">
+                    <h4 id="fat">@fat</h4>
+                    <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                    <h4 id="mdo">@mdo</h4>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+                    <h4 id="one">one</h4>
+                    <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+                    <h4 id="two">two</h4>
+                    <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
+                    <h4 id="three">three</h4>
+                    <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                    <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Scrollspy<small>with list-group</small></div>
+              <div class="card-body">
+                <div class="row bd-example2">
+                  <div class="col-4">
+                    <div class="list-group" id="list-example"><a class="list-group-item list-group-item-action active" href="#list-item-1">Item 1</a><a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a><a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a><a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a></div>
+                  </div>
+                  <div class="col-8">
+                    <div id="spy-example2" data-spy="scroll" data-target="#list-example" data-offset="0" style="height: 200px; overflow: auto">
+                      <h4 id="list-item-1">Item 1</h4>
+                      <p>
+                        Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna
+                        ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum
+                        incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod
+                        consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing
+                        dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit
+                        cupidatat commodo velit ut eiusmod cupidatat elit dolore.
+                      </p>
+                      <h4 id="list-item-2">Item 2</h4>
+                      <p>
+                        Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum consequat non
+                        elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur mollit voluptate est in duis
+                        laboris ad sit ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis ullamco
+                        deserunt sit enim elit aliqua esse irure. Laborum nisi sit est tempor laborum mollit labore officia
+                        laborum excepteur commodo non commodo dolor excepteur commodo. Ipsum fugiat ex est consectetur ipsum
+                        commodo tempor sunt in proident.
+                      </p>
+                      <h4 id="list-item-3">Item 3</h4>
+                      <p>
+                        Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum
+                        fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit
+                        elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.
+                      </p>
+                      <h4 id="list-item-4">Item 4</h4>
+                      <p>
+                        Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum
+                        fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit
+                        elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="aside-menu">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"><i class="icon-list"></i></a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab"><i class="icon-speech"></i></a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings" role="tab"><i class="icon-settings"></i></a></li>
+        </ul>
+        <!-- Tab panes-->
+        <div class="tab-content">
+          <div class="tab-pane active" id="timeline" role="tabpanel">
+            <div class="list-group list-group-accent">
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
+              <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+                <div class="avatar float-right"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"></div>
+                <div>Meeting with<strong>Lucas</strong></div><small class="text-muted mr-3"><i class="icon-calendar"></i>  1 - 3pm</small><small class="text-muted"><i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-info">
+                <div class="avatar float-right"><img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com"></div>
+                <div>Skype with<strong>Megan</strong></div><small class="text-muted mr-3"><i class="icon-calendar"></i>  4 - 5pm</small><small class="text-muted"><i class="icon-social-skype"></i>  On-line</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
+              <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
+                <div>New UI Project -<strong>deadline</strong></div><small class="text-muted mr-3"><i class="icon-calendar"></i>  10 - 11pm</small><small class="text-muted"><i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com"></div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+                <div><strong>#10 Startups.Garden</strong> Meetup</div><small class="text-muted mr-3"><i class="icon-calendar"></i>  1 - 3pm</small><small class="text-muted"><i class="icon-location-pin"></i>  Palo Alto, CA</small>
+              </div>
+              <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+                <div><strong>Team meeting</strong></div><small class="text-muted mr-3"><i class="icon-calendar"></i>  4 - 6pm</small><small class="text-muted"><i class="icon-home"></i>  creativeLabs HQ</small>
+                <div class="avatars-stack mt-2">
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"></div>
+                  <div class="avatar avatar-xs"><img class="img-avatar" src="img/avatars/8.jpg" alt="admin@bootstrapmaster.com"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="messages" role="tabpanel">
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"><span class="avatar-status badge-success"></span></div>
+              </div>
+              <div><small class="text-muted">Lukasz Holeczek</small><small class="text-muted float-right mt-1">1:52 PM</small></div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"><span class="avatar-status badge-success"></span></div>
+              </div>
+              <div><small class="text-muted">Lukasz Holeczek</small><small class="text-muted float-right mt-1">1:52 PM</small></div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"><span class="avatar-status badge-success"></span></div>
+              </div>
+              <div><small class="text-muted">Lukasz Holeczek</small><small class="text-muted float-right mt-1">1:52 PM</small></div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"><span class="avatar-status badge-success"></span></div>
+              </div>
+              <div><small class="text-muted">Lukasz Holeczek</small><small class="text-muted float-right mt-1">1:52 PM</small></div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+            <hr>
+            <div class="message">
+              <div class="py-3 pb-5 mr-3 float-left">
+                <div class="avatar"><img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com"><span class="avatar-status badge-success"></span></div>
+              </div>
+              <div><small class="text-muted">Lukasz Holeczek</small><small class="text-muted float-right mt-1">1:52 PM</small></div>
+              <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+            </div>
+          </div>
+          <div class="tab-pane p-3" id="settings" role="tabpanel">
+            <h6>Settings</h6>
+            <div class="aside-options">
+              <div class="clearfix mt-4"><small><b>Option 1</b></small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked=""><span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3"><small><b>Option 2</b></small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox"><span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+              <div><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3"><small><b>Option 3</b></small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox"><span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <div class="aside-options">
+              <div class="clearfix mt-3"><small><b>Option 4</b></small>
+                <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                  <input class="switch-input" type="checkbox" checked=""><span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                </label>
+              </div>
+            </div>
+            <hr>
+            <h6>System Utilization</h6>
+            <div class="text-uppercase mb-1 mt-4"><small><b>CPU Usage</b></small></div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><small class="text-muted">348 Processes. 1/4 Cores.</small>
+            <div class="text-uppercase mb-1 mt-2"><small><b>Memory Usage</b></small></div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><small class="text-muted">11444GB/16384MB</small>
+            <div class="text-uppercase mb-1 mt-2"><small><b>SSD 1 Usage</b></small></div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><small class="text-muted">243GB/256GB</small>
+            <div class="text-uppercase mb-1 mt-2"><small><b>SSD 2 Usage</b></small></div>
+            <div class="progress progress-xs">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><small class="text-muted">25GB/256GB</small>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/jquery/js/jquery.min.js"></script>
+    <script src="vendors/popper.js/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+  </body>
+</html>
